@@ -1,0 +1,42 @@
+.parallax{
+    @include sizes(100vh,auto);
+    animation: parallax 15s ease-in-out infinite both;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: 1;
+    
+
+
+    &__opacity{
+        @include sizes(100%, 100%);
+        background-color: black;
+        opacity: 0.5;
+        position: absolute;
+        z-index: 2;
+    }
+
+    &__title{
+        display: flex;
+        flex-direction: column;
+        @include sizes(100%, 100%);
+        align-items: center;
+        animation: fadeIn 4s;
+        justify-content: center;
+        position: absolute;
+        text-align: center;
+        z-index: 3;
+
+        h1{
+            color: $font-default-color;
+            font-size: $font-h1-size;
+        }
+
+        h2{
+            color: $font-default-color;
+            font-size: $font-h2-size;
+            font-style: italic;
+        }
+    }
+}

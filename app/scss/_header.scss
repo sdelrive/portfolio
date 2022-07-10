@@ -1,0 +1,51 @@
+.header{
+    background-color: black;
+    color: white;
+    height: auto;
+
+    
+   
+
+    &__nav{
+        @include flexDirection(row);
+        justify-content: space-around;
+        align-items: center;
+
+       
+        
+        li{
+            list-style-type: none;
+            display: inline-block;
+        }
+        .header__nav-title{
+            color: $font-default-color;
+            font-size: $font-h1-title-size;
+            text-decoration: none;
+            
+            &:hover{
+                color: $color-aquamarine;
+            }
+        }
+        
+         .header__nav-lists{
+            a{
+                display: flex;
+            color: white;
+            padding: 7px 5px;
+            font-size: .9rem;;
+            font-weight: 500;
+            margin-right: 20px;
+            transition: 200ms ease-in-out;
+            text-decoration:none;
+
+            
+
+            &:hover{
+                color: $color-aquamarine;
+            }
+            }
+            
+           
+         }
+    }
+}

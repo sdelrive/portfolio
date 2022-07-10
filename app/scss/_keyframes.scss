@@ -1,0 +1,39 @@
+@keyframes parallax {
+    0%{
+        background-image: url(../../img/parallax/parallax_1.jpg);
+        background-size: cover;
+    }
+
+
+
+    50%{
+        background-image: url(../../img/parallax/parallax_2.jpg);
+        background-size: cover;
+
+    }
+
+
+
+    100%{
+        background-image: url(../../img/parallax/parallax_3.jpg);
+        background-size: cover;
+
+    }
+
+
+}
+
+@keyframes fadeIn {
+    0% {
+      opacity: 0;
+      transform: translate(0, 100px);
+    }
+    100% {
+      opacity: 1;
+      transform: translate(0, 0);
+    }
+  }
+
+
+
+

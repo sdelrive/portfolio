@@ -1,0 +1,136 @@
+@-webkit-keyframes parallax {
+  0% {
+    background-image: url(../../img/parallax/parallax_1.jpg);
+    background-size: cover;
+  }
+  50% {
+    background-image: url(../../img/parallax/parallax_2.jpg);
+    background-size: cover;
+  }
+  100% {
+    background-image: url(../../img/parallax/parallax_3.jpg);
+    background-size: cover;
+  }
+}
+@keyframes parallax {
+  0% {
+    background-image: url(../../img/parallax/parallax_1.jpg);
+    background-size: cover;
+  }
+  50% {
+    background-image: url(../../img/parallax/parallax_2.jpg);
+    background-size: cover;
+  }
+  100% {
+    background-image: url(../../img/parallax/parallax_3.jpg);
+    background-size: cover;
+  }
+}
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translate(0, 100px);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0, 0);
+  }
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translate(0, 100px);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0, 0);
+  }
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Lato", sans-serif;
+}
+
+.header {
+  background-color: black;
+  color: white;
+  height: auto;
+}
+.header__nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+.header__nav li {
+  list-style-type: none;
+  display: inline-block;
+}
+.header__nav .header__nav-title {
+  color: rgb(233, 233, 233);
+  font-size: 25px;
+  text-decoration: none;
+}
+.header__nav .header__nav-title:hover {
+  color: rgb(22, 211, 148);
+}
+.header__nav .header__nav-lists a {
+  display: flex;
+  color: white;
+  padding: 7px 5px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  margin-right: 20px;
+  transition: 200ms ease-in-out;
+  text-decoration: none;
+}
+.header__nav .header__nav-lists a:hover {
+  color: rgb(22, 211, 148);
+}
+
+.parallax {
+  height: 100vh;
+  width: auto;
+  -webkit-animation: parallax 15s ease-in-out infinite both;
+          animation: parallax 15s ease-in-out infinite both;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: 1;
+}
+.parallax__opacity {
+  height: 100%;
+  width: 100%;
+  background-color: black;
+  opacity: 0.5;
+  position: absolute;
+  z-index: 2;
+}
+.parallax__title {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+  align-items: center;
+  -webkit-animation: fadeIn 4s;
+          animation: fadeIn 4s;
+  justify-content: center;
+  position: absolute;
+  text-align: center;
+  z-index: 3;
+}
+.parallax__title h1 {
+  color: rgb(233, 233, 233);
+  font-size: 40px;
+}
+.parallax__title h2 {
+  color: rgb(233, 233, 233);
+  font-size: 25px;
+  font-style: italic;
+}/*# sourceMappingURL=styles.css.map */
