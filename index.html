@@ -14,7 +14,7 @@
 
     <link rel="stylesheet" href="app/scss/styles.css">
 
-    <title>Document</title>
+    <title>sdelrive</title>
 </head>
 <body>
     
@@ -26,23 +26,44 @@
         </div>
     </main>
 
-    <header class="header">
-        <nav class="header__nav">
-            
-                <ul class="header__nav-lists">
+    <header class="header header__nav">
+        <nav class="header__nav reveal">
+
+                        <!-- navegador desktop -->
+                <ul class="header__nav-lists hide-for-mobile">
                     <li><a href="#">Sobre mí</a></li>
+                </ul> 
+                <ul class="header__nav-lists hide-for-mobile">
+                    <li><a href="#">Tecnologias</a></li>
                 </ul> 
             
                 <a class="header__nav-title" href="">#sdelrive</a>
-                <ul class="header__nav-lists">
+                <ul class="header__nav-lists hide-for-mobile">
                     <li><a href="#">Proyectos</a></li>
                 </ul> 
-            
-        </nav>
+                <ul class="header__nav-lists hide-for-mobile">
+                    <li><a href="#">Contacto</a></li>
+                </ul> 
 
+                          <!--  -->
+
+
+                          <!-- navegador mobile -->
+                
+        </nav>
+        <a href="#" id="menu_btn" class="header__nav-menu hide-for-desktop">
+            <span></span>
+            <span></span>
+            <span></span>
+        </a>
     </header>
 
+    <main style="height:120vh;">
+        <h1> Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, quidem quasi dolorum quis pariatur tempora quae optio id quos illo libero aspernatur, saepe sapiente dolorem expedita veritatis cumque impedit earum? Qui quo maiores corporis dolor nihil eius eos? Nulla, libero beatae laudantium repellendus architecto placeat quo quos sunt quis a adipisci laborum error et harum nisi enim perferendis maxime doloremque aspernatur officiis tempora, iure deserunt at? Repellendus, animi molestiae dignissimos totam magnam hic ab corrupti rerum at tempora quisquam cum necessitatibus sequi est nam dolores optio, id delectus alias tenetur placeat excepturi commodi deleniti nemo! Similique sint laboriosam facere doloribus!           
+        </h1>
+    </main>
 
 
+<script src="./app/js/index.js"></script>
 </body>
 </html>

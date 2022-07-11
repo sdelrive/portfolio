@@ -8,3 +8,46 @@ body{
     font-family: 'Lato', sans-serif;
 
 }
+
+
+
+
+
+// hides for desktop // mobile
+
+@media screen and (max-width: 795px){
+    .hide-for-mobile{
+        display:none;
+    
+    }
+    .body{
+        width: 100%;
+        height: 100%;
+        background-image: url(../img/fondo1.jpg);
+        margin: 0px;
+        padding: 0px;
+        background-attachment: fixed;
+    }
+ }
+
+ @media screen and (min-width: 796px){
+    .hide-for-desktop{
+        display:none;
+    
+    }
+ }
+
+
+ //reveal when scrolling
+ // reveal when scrolling
+
+.reveal{
+    position: relative;
+    transform: translateY(50px);
+    opacity: 0;
+    transition: 2s all ease;
+  }
+  .reveal.active{
+    transform: translateY(0);
+    opacity: 1;
+  }
