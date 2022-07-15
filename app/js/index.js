@@ -1,3 +1,27 @@
+const menuBtn = document.querySelector("#menu_btn");
+const header = document.querySelector('.header');
+
+
+
+menuBtn.addEventListener('click',function(){
+  console.log('click menu_btn');
+
+
+  if(header.classList.contains('open')){
+    header.classList.remove('open');
+  }
+
+  else{
+    header.classList.add('open');
+  }
+
+})
+
+
+
+
+
+
 function reveal() {
     var reveals = document.querySelectorAll(".reveal");
     for (var i = 0; i < reveals.length; i++) {

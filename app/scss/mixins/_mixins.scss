@@ -12,3 +12,15 @@
     transition: 150ms ease-in-out;
 
 }
+
+@mixin rotate{
+    >span:first-child{
+        transform: rotate(45deg);
+    }
+    >span:nth-child(2){
+        opacity: 0;
+    }
+    >span:last-child{
+        transform: rotate(-45deg);
+    }
+}

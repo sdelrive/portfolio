@@ -7,12 +7,6 @@
     height: 50px;
     // color: red;
 
-   
-    
-   ul{
-    // margin: 0px 250px 0px 250px;
-   }
-
     &__nav{
 
         &-animation{
@@ -78,7 +72,12 @@
                 transform-origin: 2px 1px;
                 &:not(:last-child){
                 margin-bottom: 6px;
+
+                    
+
                 }
+
+
                 
             }
          }
@@ -86,9 +85,28 @@
 }
 
 
+/* FUNCIONALIDAD DEL MENU HAMBURGUESA */
 
+.open{
+    .header__nav-menu{
+       @include rotate;
+    }
 
+}
 
+            /*   TENGO QUE EDITAR ESTO PARA QUE FUNCIONE */ 
+
+// &.open{   //menu abiero para moviles
+
+//     .overlay{
+//         display: block;
+//         animation: f-in 300ms ease-in-out  forwards;
+//     }
+//     // .header__menu{
+//     //     @include rotate;
+//     // }
+
+// }
 
 
 // show / hide depending on desktop or mobile

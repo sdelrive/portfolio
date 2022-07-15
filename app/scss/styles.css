@@ -148,6 +148,18 @@ body {
   margin-bottom: 6px;
 }
 
+/* FUNCIONALIDAD DEL MENU HAMBURGUESA */
+.open .header__nav-menu > span:first-child {
+  transform: rotate(45deg);
+}
+.open .header__nav-menu > span:nth-child(2) {
+  opacity: 0;
+}
+.open .header__nav-menu > span:last-child {
+  transform: rotate(-45deg);
+}
+
+/*   TENGO QUE EDITAR ESTO PARA QUE FUNCIONE */
 @media screen and (max-width: 795px) {
   .header {
     justify-content: space-between;
