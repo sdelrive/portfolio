@@ -1,18 +1,34 @@
 const menuBtn = document.querySelector("#menu_btn");
 const header = document.querySelector('.header');
+const body = document.querySelector('.body');
+const faden = document.querySelectorAll('.faden');
 
 
-
+// funcion menu hamburguesa
 menuBtn.addEventListener('click',function(){
-  console.log('click menu_btn');
+  console.log('click menuBtn');
 
 
   if(header.classList.contains('open')){
     header.classList.remove('open');
+
+    faden.forEach(function(element){
+      element.classList.remove('fadeIn')
+      element.classList.add('fadeOut')
+  
+      })
+
+
   }
 
   else{
     header.classList.add('open');
+
+    faden.forEach(function(element){
+      element.classList.add('fadeIn')
+      element.classList.remove('fadeOut')
+  
+      })
   }
 
 })
@@ -21,7 +37,7 @@ menuBtn.addEventListener('click',function(){
 
 
 
-
+  // revela objetos a medidda que bajo
 function reveal() {
     var reveals = document.querySelectorAll(".reveal");
     for (var i = 0; i < reveals.length; i++) {

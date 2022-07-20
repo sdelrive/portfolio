@@ -1,3 +1,8 @@
+.faden{
+  visibility: hidden;
+}
+
+
 @keyframes parallax {
     0%{
         background-image: url(../../img/parallax/parallax_1.jpg);
@@ -25,15 +30,44 @@
 
 @keyframes fadeIn {
     0% {
-      opacity: 0;
-      transform: translate(0, 100px);
+      visibility: hidden;
+      opacity: 0%;
     }
-    100% {
-      opacity: 1;
-      transform: translate(0, 0);
+    1%{
+      visibility: visible;
+      opacity: 0;
+    }
+    to {
+      opacity: 100%;
+      visibility: visible;
     }
   }
 
+  .fadeIn{
+    animation: fadeIn 200ms ease-in-out  forwards;
 
+}
+
+
+@keyframes fadeOut{
+  from{
+      visibility: visible;
+      opacity: 1;
+  }
+  99%{
+      visibility: visible;
+      opacity: 0;
+  }
+
+  to{
+      opacity: 0;
+      visibility: hidden;
+  
+  }
+}
+.fadeOut{
+  animation: fadeOut 200ms ease-in-out  forwards;
+
+}
 
 

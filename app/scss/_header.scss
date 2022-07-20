@@ -62,7 +62,7 @@
 
          &-menu{
             color: white;
-            
+            cursor:pointer;
             > span{
                 display: block;
                 width: 26px;
@@ -72,24 +72,46 @@
                 transform-origin: 2px 1px;
                 &:not(:last-child){
                 margin-bottom: 6px;
-
-                    
-
-                }
-
-
-                
+                }  
             }
          }
     }
 }
 
 
+.header__nav-menu-open{
+    margin: 50px 1.5rem;
+    padding: 1.625rem;
+    border-radius: 5px;
+    position: absolute;
+    width: 90%;        //menu movil abierto
+   >a{
+    color: white;
+    display: block;
+    text-align: center;
+    padding: 0.625rem;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    transition: 200ms ease-in-out;
+
+   } 
+}
+
 /* FUNCIONALIDAD DEL MENU HAMBURGUESA */
+
+.overlay{
+    position: absolute;
+    // display: block;
+    width: 100%;
+    margin: 732px 0 0 0;
+    background-color: rgba(97, 96, 96, 0.76);
+    height: 90vh;
+}
 
 .open{
     .header__nav-menu{
        @include rotate;
+    //    @include fadeIn;
     }
 
 }

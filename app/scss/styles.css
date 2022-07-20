@@ -1,3 +1,11 @@
+.dp-float {
+  display: float;
+}
+
+.faden {
+  visibility: hidden;
+}
+
 @-webkit-keyframes parallax {
   0% {
     background-image: url(../../img/parallax/parallax_1.jpg);
@@ -12,6 +20,7 @@
     background-size: cover;
   }
 }
+
 @keyframes parallax {
   0% {
     background-image: url(../../img/parallax/parallax_1.jpg);
@@ -28,24 +37,71 @@
 }
 @-webkit-keyframes fadeIn {
   0% {
-    opacity: 0;
-    transform: translate(0, 100px);
+    visibility: hidden;
+    opacity: 0%;
   }
-  100% {
-    opacity: 1;
-    transform: translate(0, 0);
+  1% {
+    visibility: visible;
+    opacity: 0;
+  }
+  to {
+    opacity: 100%;
+    visibility: visible;
   }
 }
 @keyframes fadeIn {
   0% {
-    opacity: 0;
-    transform: translate(0, 100px);
+    visibility: hidden;
+    opacity: 0%;
   }
-  100% {
-    opacity: 1;
-    transform: translate(0, 0);
+  1% {
+    visibility: visible;
+    opacity: 0;
+  }
+  to {
+    opacity: 100%;
+    visibility: visible;
   }
 }
+.fadeIn {
+  -webkit-animation: fadeIn 200ms ease-in-out forwards;
+          animation: fadeIn 200ms ease-in-out forwards;
+}
+
+@-webkit-keyframes fadeOut {
+  from {
+    visibility: visible;
+    opacity: 1;
+  }
+  99% {
+    visibility: visible;
+    opacity: 0;
+  }
+  to {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    visibility: visible;
+    opacity: 1;
+  }
+  99% {
+    visibility: visible;
+    opacity: 0;
+  }
+  to {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+.fadeOut {
+  -webkit-animation: fadeOut 200ms ease-in-out forwards;
+          animation: fadeOut 200ms ease-in-out forwards;
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -135,6 +191,7 @@ body {
 }
 .header__nav-menu {
   color: white;
+  cursor: pointer;
 }
 .header__nav-menu > span {
   display: block;
@@ -148,7 +205,32 @@ body {
   margin-bottom: 6px;
 }
 
+.header__nav-menu-open {
+  margin: 50px 1.5rem;
+  padding: 1.625rem;
+  border-radius: 5px;
+  position: absolute;
+  width: 90%;
+}
+.header__nav-menu-open > a {
+  color: white;
+  display: block;
+  text-align: center;
+  padding: 0.625rem;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  transition: 200ms ease-in-out;
+}
+
 /* FUNCIONALIDAD DEL MENU HAMBURGUESA */
+.overlay {
+  position: absolute;
+  width: 100%;
+  margin: 732px 0 0 0;
+  background-color: rgba(97, 96, 96, 0.76);
+  height: 90vh;
+}
+
 .open .header__nav-menu > span:first-child {
   transform: rotate(45deg);
 }
